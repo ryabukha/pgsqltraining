@@ -3,8 +3,6 @@ version: '3'
 services:
   postgres:
     image: postgres
-#    ports:
-#      - "5432:5432"
     volumes:
       - pg-dataset:/var/lib/postgresql/data
     environment:
@@ -16,8 +14,7 @@ services:
     depends_on: 
       - postgres
     ports:
-#      - "53603:53603"
-      - "80:80"
+      - "${PGADMIN_PORT_NUMBER:-80}:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: root
