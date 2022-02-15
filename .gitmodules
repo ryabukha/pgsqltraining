@@ -1,0 +1,3 @@
+[submodule "postgres-course-ru"]
+	path = postgres-course-ru
+	url = https://github.com/EngineerSpock/postgres-course-ru
